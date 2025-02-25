@@ -43,3 +43,15 @@ footer {
     bottom: 0;
     width: 100%;
 }
+@font-face {
+    font-family: 'NRT-Reg';
+    src: url('../fonts/NRT-Reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply the font globally */
+body {
+    font-family: 'NRT-Reg', sans-serif;
+}
+
