@@ -3,7 +3,7 @@ const sendBtn = document.querySelector(".bar-wrapper button");
 const messageBox = document.querySelector(".message-box");
 
 let API_URL = "https://api.openai.com/v1/chat/completions";
-let API_KEY = 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
+let API_KEY = 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
 
 sendBtn.onclick = function () {
   if(messageBar.value.length > 0){
