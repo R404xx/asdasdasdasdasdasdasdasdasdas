@@ -3,7 +3,7 @@ const sendBtn = document.querySelector(".bar-wrapper button");
 const messageBox = document.querySelector(".message-box");
 
 let API_URL = "https://api.openai.com/v1/chat/completions";
-let API_KEY = /*Get API KEY at https://platform.openai.com/account/api-keys */
+let API_KEY =  ${{ secrets.TOKEN }
 
 sendBtn.onclick = function () {
   if(messageBar.value.length > 0){
@@ -12,7 +12,7 @@ sendBtn.onclick = function () {
 
     let message =
     `<div class="chat message">
-    <img src="img/user.jpg">
+    <img src="user.png">
     <span>
       ${UserTypedMessage}
     </span>
@@ -20,7 +20,7 @@ sendBtn.onclick = function () {
 
   let response = 
   `<div class="chat response">
-  <img src="img/chatbot.jpg">
+  <img src="IMG_3889.png">
   <span class= "new">...
   </span>
 </div>`
@@ -34,13 +34,17 @@ sendBtn.onclick = function () {
         method : "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${API_KEY}`
+          "Authorization": `Bearer ${{ secrets.TOKEN }`
         },
         body: JSON.stringify({
-          "model": "gpt-3.5-turbo",
-          "messages": [{"role": "user", "content": UserTypedMessage}]
-        })
-      }
+    "model": "gpt-3.5-turbo",
+    "messages": [
+        {
+            "role": "user", 
+            "content": "Please respond in Kurdish Sorani"
+        }
+    ]
+})
 
       fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
         const ChatBotResponse = document.querySelector(".response .new");
