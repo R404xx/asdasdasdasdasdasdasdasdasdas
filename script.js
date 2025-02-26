@@ -12,7 +12,7 @@ sendBtn.onclick = function () {
 
     let message =
     `<div class="chat message">
-    <img src="img/user.jpg">
+    <img src="img/user.png">
     <span>
       ${UserTypedMessage}
     </span>
@@ -20,7 +20,7 @@ sendBtn.onclick = function () {
 
   let response = 
   `<div class="chat response">
-  <img src="img/chatbot.jpg">
+  <img src="img/IMG_3889.png">
   <span class= "new">...
   </span>
 </div>`
