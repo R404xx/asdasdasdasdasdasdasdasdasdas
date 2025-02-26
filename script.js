@@ -3,7 +3,7 @@ const sendBtn = document.querySelector(".bar-wrapper button");
 const messageBox = document.querySelector(".message-box");
 
 let API_URL = "https://api.openai.com/v1/chat/completions";
-let API_KEY =  ${{ secrets.TOKEN }
+let API_KEY = /*Get API KEY at https://platform.openai.com/account/api-keys */
 
 sendBtn.onclick = function () {
   if(messageBar.value.length > 0){
@@ -12,7 +12,7 @@ sendBtn.onclick = function () {
 
     let message =
     `<div class="chat message">
-    <img src="img/user.png">
+    <img src="img/user.jpg">
     <span>
       ${UserTypedMessage}
     </span>
@@ -20,7 +20,7 @@ sendBtn.onclick = function () {
 
   let response = 
   `<div class="chat response">
-  <img src="img/IMG_3889.png">
+  <img src="img/chatbot.jpg">
   <span class= "new">...
   </span>
 </div>`
